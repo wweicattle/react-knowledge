@@ -1,0 +1,19 @@
+{
+  "name": "react-knowledge",
+  "version": "1.0.0",
+  "description": "react des",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wweicattle/react-knowledge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wweicattle/react-knowledge/issues"
+  },
+  "homepage": "https://github.com/wweicattle/react-knowledge#readme"
+}
