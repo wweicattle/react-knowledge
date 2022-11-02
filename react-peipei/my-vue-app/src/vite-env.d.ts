@@ -1,2 +1,2 @@
 /// <reference types="vite/client" />
-declare module '@/config/config.ts'
+declare module 'styled-components';

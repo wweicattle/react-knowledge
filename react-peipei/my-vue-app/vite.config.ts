@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import vitePluginImp from 'vite-plugin-imp'
 import path from 'path'
-import themeVariables from './src/config/config.js'
+import themeVariables from './src/config/config.ts'
 // const themeVariables = {
 //   '@primary-color': '#008c8c',
 //   '@link-color': ' #1890ff', // 链接色
