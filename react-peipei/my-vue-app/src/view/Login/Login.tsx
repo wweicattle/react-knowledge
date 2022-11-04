@@ -8,7 +8,9 @@ const App: React.FC = () => {
   const onFinish = (values: any) => {
     console.log('Success:', values)
     window.localStorage.setItem('user', values.username)
+   setTimeout(() => {
     navigate('/')
+   }, 0);
   }
 
   return (
