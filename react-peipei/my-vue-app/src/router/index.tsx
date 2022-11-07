@@ -11,6 +11,8 @@ import Set1 from '@/view/setting/advertiseMent'
 import Set2 from '@/view/setting/advertiseMent  copy'
 import Set3 from '@/view/setting/advertiseMent  copy 2'
 import Set4 from '@/view/setting/advertiseMent  copy 3'
+import Set5 from '@/view/setting/advertiseMent  copy 4'
+
 
 import { ALL_VIEWS } from './constant'
 import { useNavigate } from 'react-router-dom'
@@ -24,9 +26,9 @@ function RequireAuth(children: any) {
   const user = window.localStorage.getItem('user')
   return user ? (
     children
+  ) : (
     // <Navigate to="/" />
     // <Redirect to="/peipeix-material/v1/setting/advertisement" />
-  ) : (
     <Navigate to="/login" />
   )
 }
@@ -55,6 +57,10 @@ let routes = [
       {
         path: '/ppx_material/v1/setting/ad',
         element: <Set4 />
+      },
+      {
+        path: '/peipeix-msg/v1/setting/avatarList',
+        element: <Set5 />
       }
     ]
   },

@@ -18,7 +18,7 @@ import {
   useLocation
 } from 'react-router-dom'
 
-import LeftMenu from "./leftMenu"
+import LeftMenu from './leftMenu'
 const Styleds = styled.div`
   color: #fff;
   font-size: 16px;
@@ -39,6 +39,7 @@ const Contains = styled.div`
     // height: 100%;
   }
 `
+
 const TabMenuStyle = styled.ul`
   // height: 100%;
   width: 100%;
@@ -67,6 +68,7 @@ const TabMenuStyle = styled.ul`
     }
   }
 `
+
 const TabMenu = function () {
   const [activeIndex, setIndex] = useState<number>(-1)
   const tabDatas = [
@@ -90,6 +92,8 @@ const TabMenu = function () {
             style={{ color: activeIndex == index ? '#008c8c' : '' }}
             onClick={() => {
               setIndex(index)
+              // 请求路由的左边栏菜单
+
             }}
           >
             {val.text}
@@ -117,14 +121,17 @@ const App: React.FC = () => {
           <LeftMenu />
         </Sider>
         <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }}>
-            {React.createElement(
-              collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-              {
-                className: 'trigger',
-                onClick: () => setCollapsed(!collapsed)
-              }
-            )}
+          <Header className="site-layout-background" style={{ padding: 0 ,borderBottom:'1px solid #eee'}}>
+            <span style={{paddingLeft:'8px'}}>
+              {' '}
+              {React.createElement(
+                collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+                {
+                  className: 'trigger',
+                  onClick: () => setCollapsed(!collapsed)
+                }
+              )}
+            </span>
             <TabMenu />
             <div className="actor_img">actis</div>
           </Header>

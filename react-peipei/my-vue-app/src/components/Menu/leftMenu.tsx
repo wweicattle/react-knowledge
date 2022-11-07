@@ -103,7 +103,7 @@ export default function () {
         seq: 0,
         serviceCode: 'ppx-admin',
         status: 1,
-        url: 'peipeix-msg/v1/setting/avatarList'
+        url: '/peipeix-msg/v1/setting/avatarList'
       }
     ]
   }
@@ -122,12 +122,12 @@ export default function () {
     return {
       key: res.url,
       icon: <UserOutlined />,
-      label: res.name,
+      label: res.childs ? res.name : <Link to={res.url}>{res.name}</Link>,
       children
     }
   })
   const [menuDatas, setMenu] = useState(newMenus)
-  // s设置默认路由选中高亮
+  // 设置默认路由选中高亮
   const defaultSelectedKeys = ['peipeix-material/v1/setting/advertisement']
   const defaultOpenKeys = ['ppx_material/v1/setting/ad']
   return (
